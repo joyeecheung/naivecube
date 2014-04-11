@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import sys
-from itertools import *
+from itertools import product
 
 
 def seq(start, end):
