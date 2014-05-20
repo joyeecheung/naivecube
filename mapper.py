@@ -9,12 +9,13 @@ def seq(start, end):
 
 def read_input(file):
     for line in file:
-        yield line.split()
+        yield line.rstrip().split()
 
 
 def main():
     data = read_input(sys.stdin)
     C = [a + b for a, b in product(seq(2, 4), seq(5, 7))]
+    del C[0]
     for e in data:
         for R in C:
             k = [e[i] for i in R]
